@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <title> "Soporte técnico" </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="hoja de estilo" href="style.css">
+    <script>
+      function enviar() 
+      {
+        let respuestas = 
+        {
+          "enciende" : "<br> Revisar la fuente de energia, posibemente alli se encuentre el problema",
+          "señal" : "<br>Desinstalar y volver a instalar los controladores de la tarjeta",
+          "arranca" : "<br>Reemplazar el disco duro",
+          "calienta" : "<br>Limpieza y mantenimiento de ventiladores",
+          "lenta" : "<br>Reiniciar el ordenador y en todo caso cambiar o reemplazar la memoria RAM"
+        };
+
+        let mensaje = document.getElementById("txt_mensaje").value;
+        document.getElementById("txt_mensaje").value="";
+        document.getElementById("mensajes").innerHTML+="Usuario: " + mensaje;
+
+        let palabras = mensaje.split(" ");
+        for(let i in palabras)
+        {
+          if(respuestas[palabras[i]] != undefined)
+          {
+            document.getElementById("mensajes").innerHTML+="Soporte virtual: ";
+            document.getElementById("mensajes").innerHTML+= respuestas[palabras[i]];
+          }
+          else
+          {
+            document.getElementById("mensajes").innerHTML+="";
+          }
+        }
+        
+      }
+    </script>
+    
+    
+
+  </head>
+  
+  <body>
+    <header> 
+      
+      <h1 style="background-color=#CE7DD5"> Soporte técnico virtual </h1>
+
+      <nav>
+
+        <a href=”domain.tld/” style="background-color: aqua";> Inicio </a>
+        
+        <a href=”domain.tld/informacion” style="background-color: violet";> ¿Quiénes_somos? </a>
+
+        <a href=”domain.tld/pys” style="background-color: aqua";> Productos-y-servicios </a>
+        
+        <a href=”domain.tld/servicio” style="background-color: violet";> Soporte_virtual </a>
+        
+        <a href=”domain.tld/cnt” style="background-color: aqua";> Contactos </a>
+
+      </nav>
+
+    </header>
+    <main>
+
+      
+      
+      <div class="container">
+        <div class="row">
+          
+          <div class="col">
+            <p> Bienvenidos a nuestra pagina web de soporte técnico virtual del grupo de tecnolochicas:</p>
+            <h1>FKYP </h1>
+            <img src="Imagenes/logo.jpg"Logo FKYP">
+            <p> "Eslogan" </p>
+
+          </div>   
+
+          <div class=”col”> 
+          
+          <h1> ¿Quiénes somos? </h1> 
+            
+            <p> Somos alumnas del Colegio de Estudios Científicos y Tecnológicos del estado de Guanajuato (CECyTEG) en el plantel Pénjamo </p>
+            
+            <p> Estudiamos la carrera de Soporte y Mantenimiento de Equipo de Cómputo (SyMEC) en el grupo 2705 </p>
+      
+            <img src="Imagenes/rana.jpg"#CECyTEPenjamo">
+          
+            <p> Nosotros somos encargadas de brindar soporte preventivo y correctivo a los equipos de cómputo de manera presencial y a distancia </p>
+          
+            <p> Para brindar el soporte técnico a distancia de manera mas facil creamos esta pagina web </p>
+          
+            <p> En la sección de "Soporte_vitual" podran encontrar algunas posibles soluciones para los problemas comunes que presentan los equipos de cómputo</p>
+
+          </div>
+            
+            <div class=”col”>
+              <h1> Productos y servicios </h1>
+              <p> Ofrecemos una amplia variedad de productos y servicios como: </p>
+              
+              <h2> Productos:</h2>
+              <table>
+                <tr>
+                  <td><img src="Imagenes/pc.jpg"width:200; heigth:200;"> Computadora de escritorio </td>
+                  <td><img src="Imagenes/laptop.jpg"width:200; heigth:200;"> Laptops </td>
+                  
+                </tr>  
+                
+                <tr>
+                  <td><img src="Imagenes/tablet.jpg" style= "width:200; heigth:200;"> Tablets </td>
+                  <td><img src="Imagenes/monitor.jpg" style= "width:200; heigth:200;"> Monitores </td>
+                </tr>
+                
+                <tr> 
+                  <td><img src="Imagenes/impresora.jpg" style= "width:200; heigth:200;"> Impresoras</td>
+                  <td><img src="Imagenes/tinton.jpg"width:200; heigth:200;"> Tinta y toner </td>
+                </tr>  
+                
+                <tr>
+                  <td><img src="Imagenes/perifericos.jpg" style= "width:200; heigth:200;"> Perifericos(Teclado, mouse,etc.) </td>
+                  <td><img src="Imagenes/accesorios.jpg" style= "width:200; heigth:200;"> De mas accesorios </td>
+                </tr>   
+              </table>
+              
+              <h2> Servicios: </h2>
+              <ul>
+  
+                <li> Reparación e instalación de hadware y software </li>
+                <li>Pruebas de desempeño a los equipos</li>
+                <li>Instalación de paqueteria de Office</li>
+                <li>Instalación de drivers</li>
+                <li> Optimización de los equipos</li>
+                <li> Eliminación de virus y malware</li>
+                
+              </ul>
+              
+              
+            </div>
+          
+          
+        <div class=”col”>
+          <h1> Soporte Virtual </h1>
+          <div id="mensajes">
+            Bienvenido a la seccion de soporte virtual
+            <p> Elige el problema de tu equipo de computo escribiendolo en el recuadro </p>
+            <ul>
+              <li> La computadora no enciende</li>
+              <li> La computadora no manda señal de video</li>
+              <li> La computadora no arranca</li>
+              <li> La computadora se calienta </li>
+              <li> La computadora esta lenta </li>
+            </ul>
+          <input type="text" id="txt_mensaje" placeholder="Escribe aqui tu problema:">
+          <button id="enviar" onclick="enviar()"> Enviar</button>
+          </div>
+          
+          <div class="col">
+            <h1> Contactos </h1>
+            <p> Pueden contactarnos por los siguientes medios: </p>
+            
+            <ul>
+              <li>Numero de telefono: 469 692 2420 </li>
+              <li>Correo electronico: redessociales.penjamo@gto.cecyteg.edu.mx </li>
+              <li>Direccion: Comunidad San Rafael de Villaseñor s/n, San Rafael, Pénjamo, Gto. </li>
+            </ul>  
+          
+            <p> Tambien por medio de nuestras redes sociales: </p>
+            
+            <footer>
+
+              <a href=”https://x.com/CECyTEG_Penjamo?s=20”>Twitter</a>
+
+              <a href=”https://www.facebook.com/cecyteguanajuatoplantelpenjamo?mibextid=ZbWKwL”>Facebook</a>
+
+              <a href=”https://www.instagram.com/cecyteguanajuatoplantelpenjamo?igsh=MTJvemM2ajRta25ucw==”>Instagram</a>
+
+            </footer>
+            
+          </div>
+
+   </main>  
+  </body>
+  
+</html>
