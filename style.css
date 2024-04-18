@@ -81,4 +81,10 @@ tr
 {
   color: #4A235A;
 }
+
+h3
+{
+  font-size: 20px;
+  color: hsl(282, 34%, 51%);
+}
 </style>

@@ -11,28 +11,29 @@
       {
         let respuestas = 
         {
-          "enciende" : "<br> Revisar la fuente de energia, posibemente alli se encuentre el problema",
-          "señal" : "<br>Desinstalar y volver a instalar los controladores de la tarjeta",
-          "arranca" : "<br>Reemplazar el disco duro",
-          "calienta" : "<br>Limpieza y mantenimiento de ventiladores",
-          "lenta" : "<br>Reiniciar el ordenador y en todo caso cambiar o reemplazar la memoria RAM"
+          "1" : "<br> Revisar la fuente de energia, posibemente ahi se encuentre el problema<br> Si es por el boton dañado, llevarla a mantenimiento<br> ",
+          "2" : "<br>Eliminar polvo y suciedad que puede causar malas conexiones <br> Desinstalar y volver a instalar los controladores de la tarjeta<br>",
+          "3" : "<br>Reemplazar el disco duro<br> Comprobar que la memoria RAM este bien conectada<br>",
+          "4" : "<br>Realizar una limpieza y mantenimiento de ventiladores<br> Realizar una limpieza fisica del ordenador<br>",
+          "5" : "<br>Eliminar los programas inecesarios que esten instalados en nuestro equipo<br> Reiniciar el ordenador y en todo caso cambiar o reemplazar la memoria RAM<br>",
+          "6" : "<br>Limpiar cuidadosamente el puerto de carga<br> Checar si el cable del cargador no esta dañado, si es asi, adquirir un nuevo cargador<br>",
         };
 
         let mensaje = document.getElementById("txt_mensaje").value;
         document.getElementById("txt_mensaje").value="";
-        document.getElementById("mensajes").innerHTML+="Usuario: " + mensaje;
+        document.getElementById("mensajes").innerHTML+="<br>Usuario: " + mensaje;
 
         let palabras = mensaje.split(" ");
         for(let i in palabras)
         {
           if(respuestas[palabras[i]] != undefined)
           {
-            document.getElementById("mensajes").innerHTML+="Soporte virtual: ";
-            document.getElementById("mensajes").innerHTML+= respuestas[palabras[i]];
+            document.getElementById("mensajes").innerHTML+="<br>Soporte virtual: ";
+            document.getElementById("mensajes").innerHTML+= "<br>" + respuestas[palabras[i]];
           }
           else
           {
-            document.getElementById("mensajes").innerHTML+="";
+            document.getElementById("mensajes").innerHTML+="<br>";
           }
         }
         
@@ -50,15 +51,15 @@
 
       <nav>
 
-        <a href=”domain.tld/” style="background-color: aqua";> Inicio </a>
+        <a href="#Inicio" style="background-color: aqua";> Inicio </a>
         
-        <a href=”domain.tld/informacion” style="background-color: violet";> ¿Quiénes_somos? </a>
+        <a href="#¿Quiénes_somos?" style="background-color: violet";> ¿Quiénes_somos? </a>
 
-        <a href=”domain.tld/pys” style="background-color: aqua";> Productos-y-servicios </a>
+        <a href="#Productos-y-servicios" style="background-color: aqua";> Productos-y-servicios </a>
         
-        <a href=”domain.tld/servicio” style="background-color: violet";> Soporte_virtual </a>
+        <a href="#Soporte-virtual" style="background-color: violet";> Soporte_virtual </a>
         
-        <a href=”domain.tld/cnt” style="background-color: aqua";> Contactos </a>
+        <a href="#Contactanos" style="background-color: aqua";> Contactos </a>
 
       </nav>
 
@@ -70,15 +71,15 @@
       <div class="container">
         <div class="row">
           
-          <div class="col">
+          <div class="col" id="Inicio">
             <p> Bienvenidos a nuestra pagina web de soporte técnico virtual del grupo de tecnolochicas:</p>
             <h1>FKYP </h1>
-            <img src="Imagenes/logo.jpg"Logo FKYP">
+            <img src="Imagenes/logo.jpg" alt= "Logo FKYP">
             <p> "En tus manos esta contar con el mejor servicio" </p>
 
           </div>   
 
-          <div class=”col”> 
+          <div class=”col” id="¿Quiénes_somos?"> 
           
           <h1> ¿Quiénes somos? </h1> 
             
@@ -86,53 +87,67 @@
             
             <p> Estudiamos la carrera de Soporte y Mantenimiento de Equipo de Cómputo (SyMEC) en el grupo 2705 </p>
       
-            <img src="Imagenes/rana.jpg"#CECyTEPenjamo">
+            <img src="Imagenes/rana.jpg" alt="#CECyTEPenjamo" >
           
             <p> Nosotros somos encargadas de brindar soporte preventivo y correctivo a los equipos de cómputo de manera presencial y a distancia </p>
           
             <p> Para brindar el soporte técnico a distancia de manera mas facil creamos esta pagina web </p>
           
-            <p> En la sección de "Soporte_vitual" podran encontrar algunas posibles soluciones para los problemas comunes que presentan los equipos de cómputo</p>
+            <p> En la sección de "Soporte_virtual" podran encontrar algunas posibles soluciones para los problemas comunes que presentan los equipos de cómputo</p>
 
           </div>
             
-            <div class=”col”>
+            <div class=”col” id="Productos-y-servicios">
               <h1> Productos y servicios </h1>
               <p> Ofrecemos una amplia variedad de productos y servicios como: </p>
               
               <h2> Productos:</h2>
+              <h3> IMPORTANTE!!</h3>
+              <p>Cabe aclarar que es un precio aproximado, este puede variar de acuerdo al tipo, marca y caracteristicas del producto </p>
+             
               <table>
                 <tr>
-                  <td><img src="Imagenes/pc.jpg"width:200; heigth:200;"> Computadora de escritorio </td>
-                  <td><img src="Imagenes/laptop.jpg"width:200; heigth:200;"> Laptops </td>
+                  <td><img src="Imagenes/pc.jpg" style="width:200; heigth:200;"><p>Computadora de escritorio <br> 
+                    $14,999.00 MXN</p> </td>
+                  <td><img src="Imagenes/laptop.jpg" style="width:200; heigth:200;"><p> Laptops <br>
+                  $10,469.00 MXN</p> </td>
                   
                 </tr>  
                 
                 <tr>
-                  <td><img src="Imagenes/tablet.jpg" style= "width:200; heigth:200;"> Tablets </td>
-                  <td><img src="Imagenes/monitor.jpg" style= "width:200; heigth:200;"> Monitores </td>
+                  <td><img src="Imagenes/tablet.jpg" style= "width:200; heigth:200;"><p> Tablets <br>
+                  $2,689.00 MXN </p></td>
+                  <td><img src="Imagenes/monitor.jpg" style= "width:200; heigth:200;"><p> Monitores<br> 
+                  $1,369.00 MXN </p></td>
                 </tr>
                 
                 <tr> 
-                  <td><img src="Imagenes/impresora.jpg" style= "width:200; heigth:200;"> Impresoras</td>
-                  <td><img src="Imagenes/tinton.jpg"width:200; heigth:200;"> Tinta y toner </td>
+                  <td><img src="Imagenes/impresora.jpg" style= "width:200; heigth:200;"><p> Impresoras<br> 
+                  $15,249.00 MXN </p></td>
+                  <td><img src="Imagenes/tinton.jpg" style="heigth:200;"><p>Tinta $981.62 MXN <br> 
+                  Toner $469.00 MXN</p></td>
                 </tr>  
                 
                 <tr>
-                  <td><img src="Imagenes/perifericos.jpg" style= "width:200; heigth:200;"> Perifericos(Teclado, mouse,etc.) </td>
-                  <td><img src="Imagenes/accesorios.jpg" style= "width:200; heigth:200;"> De mas accesorios </td>
+                  <td><img src="Imagenes/perifericos.jpg" style= "width:200; heigth:200;"> <p>Perifericos(Teclado, mouse,etc.)<br>
+                    $"El precio dependera del tipo de producto"</p> </td>
+                  <td><img src="Imagenes/accesorios.jpg" style= "width:200; heigth:200;"><p> De mas accesorios<br> 
+                  $"El precio dependera del tipo de producto" </p></td>
                 </tr>   
               </table>
               
               <h2> Servicios: </h2>
+              <h3> IMPORTANTE!!</h3>
+              <p>Cabe aclarar que es un precio aproximado, este puede variar de acuerdo a las nececidades o situaciones que se presenten con respecto al servicio</p>
+             
               <ul>
   
-                <li> Reparación e instalación de hadware y software </li>
-                <li>Pruebas de desempeño a los equipos</li>
-                <li>Instalación de paqueteria de Office</li>
-                <li>Instalación de drivers</li>
-                <li> Optimización de los equipos</li>
-                <li> Eliminación de virus y malware</li>
+                <li>Reparación e instalación de hadware y software - $"El precio dependera de lo que se requira realizar"</li>
+                <li>Pruebas de desempeño a los equipos - $349.00 MXN</li>
+                <li>Instalación de paqueteria de Office - $350.00 MXN</li>
+                <li>Instalación de drivers - $"Depende del tipo de driver a instalar"</li>
+                <li>Optimización de los equipos $200.00 MXN</li>
+                <li>Eliminación de virus y malware $200.00 - $300.00 MXN </li>
                 
               </ul>
               
@@ -140,28 +155,36 @@
             </div>
           
           
-        <div class=”col”>
+        <div class=”col” id="Soporte-virtual">
+
           <h1> Soporte Virtual </h1>
           <div id="mensajes">
-            Bienvenido a la seccion de soporte virtual
-            <p> Elige el problema de tu equipo de computo escribiendolo en el recuadro </p>
-            <ul>
+            <h3>Bienvenido a la seccion de soporte virtual</h3>
+            <h2> "Rokcuyr_Asistente a su servicio"</h2>
+
+            <p> Elige el problema de tu equipo de computo escribiendo el numero que le pertenece en el recuadro</p>
+            <p> Nuestro asistente virtual le brindara algunas posibles soluciones a su problema</p>
+
+            <h3> Posibles problemas en su equipo:</h3>
+            <ol>
               <li> La computadora no enciende</li>
               <li> La computadora no manda señal de video</li>
               <li> La computadora no arranca</li>
               <li> La computadora se calienta </li>
               <li> La computadora esta lenta </li>
-            </ul>
+              <li> La bateria no carga </li>
+            </ol>
           <input type="text" id="txt_mensaje" placeholder="Escribe aqui tu problema:">
           <button id="enviar" onclick="enviar()"> Enviar</button>
           </div>
           
-          <div class="col">
+          <div class="col" id="Contactanos">
+
             <h1> Contactos </h1>
             <p> Pueden contactarnos por los siguientes medios: </p>
             
             <ul>
-              <li>Numero de telefono: 469 692 2420 </li>
+              <li>Numero de telefono: +52 469 692 2420 </li>
               <li>Correo electronico: redessociales.penjamo@gto.cecyteg.edu.mx </li>
               <li>Direccion: Comunidad San Rafael de Villaseñor s/n, San Rafael, Pénjamo, Gto. </li>
             </ul>  
@@ -179,6 +202,8 @@
             </footer>
             
           </div>
+
+          © 2024 Maria Fernanda N. Herrera. Todos los derechos reservados»
 
    </main>  
   </body>
