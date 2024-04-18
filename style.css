@@ -1,13 +1,16 @@
 <style>
+
 /* Estilos para el encabezado */
-header {
+header 
+{
   text-align: center;
   padding: 10px;
   
 }
 
 /* Estilos para la barra de navegación */
-nav {
+nav 
+{
   text-align: center;
   word-spacing: 30px;
   padding: 10px;
@@ -16,64 +19,74 @@ nav {
 }
 
 /* Estilos generales */
-* {
+* 
+{
   box-sizing: border-box;
   font-family: 'Times New Roman' ;/* Mejora la consistencia de los tamaños */ 
 }
 
 /* Estilos para las filas de contenido */
-.row {
+.row 
+{
   display: flex;
   flex-wrap: wrap;
 }
 
 /* Estilos para el área de texto de las publicaciones */
-.post-text-box, .profile {
+.post-text-box, .profile 
+{
   flex: 70%;
   padding: 20px;
 }
 
 /* Estilos para las imágenes de perfil */
-.profile img {
+.profile img 
+{
   width: 120px;
   display: block;
   margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 
 /* Estilos para los títulos */
-h1 {
+h1 
+{
   font-weight: bold;
   font-size: 40px;
   color: #CE7DD5;
   
 }
 
-h2 {
+h2 
+{
   font-size: 30px;
   color: #AF7AC5;
 }
 
 /* Estilos para los párrafos */
-p {
+p 
+{
   color: #4A235A;
   font-size: 20px;
 }
 
 /* Estilos para los enlaces de navegación */
-nav a {
+nav a 
+{
   color: #6b8e23; /* Verde pastel */
   text-decoration: none;
   font-size: larger;
 }
 
 /* Estilos para los elementos de la lista */
-li {
+li 
+{
   font-size: 20px;
   color:#4A235A;
 }
 
 /* Estilos para el fondo del cuerpo */
-body {
+body 
+{
   background: #f0f0e6; /* Un tono suave de amarillo */
 }
 
@@ -85,6 +98,15 @@ tr
 h3
 {
   font-size: 20px;
-  color: hsl(282, 34%, 51%);
+  color: #AF7AC5;
+}
+
+footer
+{
+  text-align: center;
+  word-spacing: 30px;
+  padding: 10px;
+  background-color: #f5f5dc; /* Beige pastel */
+  font-family: cursive;
 }
 </style>
