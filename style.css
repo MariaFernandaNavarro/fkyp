@@ -1,4 +1,3 @@
-<style>
 
 /* Estilos para el encabezado */
 header 
@@ -14,10 +13,16 @@ nav
   text-align: center;
   word-spacing: 30px;
   padding: 10px;
-  background-color: #f5f5dc; /* Beige pastel */
+  background-color: #ececda; /* Beige pastel */
   font-family: cursive;
 }
 
+title
+{
+  font-weight: bold;
+  font-size: 500px;
+  color: #7dd5ce !important;
+}
 /* Estilos generales */
 * 
 {
@@ -44,24 +49,39 @@ nav
 {
   width: 120px;
   display: block;
-  margin: 0 auto; /* Centra la imagen horizontalmente */
+  margin: 50 center; 
+ 
 }
 
 /* Estilos para los títulos */
 h1 
 {
   font-weight: bold;
-  font-size: 40px;
-  color: #CE7DD5;
+  font-size: 500px;
+  color: #aa7dd5 !important;
   
 }
 
 h2 
 {
   font-size: 30px;
-  color: #AF7AC5;
+  color: #a568bf !important;
 }
 
+h3
+{
+  font-size: 20px;
+  color: #8f5ba6 !important;
+}
+
+
+h4
+{
+  font-weight: bold;
+  font-size: 40px;
+  color: #bf72c6 !important;
+  
+}
 /* Estilos para los párrafos */
 p 
 {
@@ -92,21 +112,68 @@ body
 
 tr
 {
-  color: #4A235A;
+  color: #4A235A !important;
 }
 
-h3
-{
-  font-size: 20px;
-  color: #AF7AC5;
-}
 
 footer
 {
   text-align: center;
   word-spacing: 30px;
   padding: 10px;
-  background-color: #f5f5dc; /* Beige pastel */
+  background-color: #111212 !important; /* Beige pastel */
   font-family: cursive;
 }
-</style>
+
+#Inicio
+{
+  margin: 20px;
+  padding: 20px;
+  background-color:rgb(154, 226, 224) ;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,255,255);
+  transition: box-shadow 0.3s ease-out;
+
+  width: 100px;
+}
+
+#Quiénes_somos
+{
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(255, 216, 253);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,255,255);
+  transition: box-shadow 0.3s ease-out;
+}
+
+#Productos-y-servicios
+{
+  margin: 20px;
+  padding: 20px;
+  background-color:  rgb(154, 226, 224);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,255,255);
+  transition: box-shadow 0.3s ease-out;
+}
+
+
+#Soporte-virtual
+{
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(255, 216, 253);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,255,255);
+  transition: box-shadow 0.3s ease-out;
+}
+
+#Contactanos
+{
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(154, 226, 224);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,255,255);
+  transition: cubic-bezier() 0.3s ease-out;
+}
