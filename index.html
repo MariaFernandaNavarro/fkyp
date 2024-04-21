@@ -12,25 +12,25 @@
       {
         let respuestas = 
         {
-          "1" : "<br> Revisar la fuente de energia, posiblemente ahi se encuentre el problema<br> Si es por el boton dañado, llevarla a mantenimiento<br> ",
-          "2" : "<br>Eliminar polvo y suciedad que puede causar malas conexiones <br> Desinstalar y volver a instalar los controladores de la tarjeta<br>",
-          "3" : "<br>Reemplazar el disco duro<br> Comprobar que la memoria RAM este bien conectada<br>",
-          "4" : "<br>Realizar una limpieza y mantenimiento de ventiladores<br> Realizar una limpieza fisica del ordenador<br>",
-          "5" : "<br>Eliminar los programas inecesarios que esten instalados en nuestro equipo<br> Reiniciar el ordenador y en todo caso cambiar o reemplazar la memoria RAM<br>",
-          "6" : "<br>Limpiar cuidadosamente el puerto de carga<br> Checar si el cable del cargador no esta dañado, si es asi, adquirir un nuevo cargador<br>",
-          "7" : "<br> Comprese una:) en nuestra seccion de Productos y servicios encontara este producto",
+          "1" : "<p><br>Solución 1: Desconectar el ordenador y retirar la batería <br>Solución 2: Verificar que el adaptador esté enchufado correctamente a la toma de corriente o utilizar otro <br>Solución 3: Revisar si el cable tiene algún tipo de daño <br>Solución 4: Probemos con otros enchufes<br></p>",
+          "2" : "<p><br>Solución 1: Normalmente, no se ha conectado correctamente el monitor en la toma de vídeo adecuada. Si tu ordenador lleva una tarjeta gráfica instalada, debes siempre conectar el monitor a una toma de vídeo de la propia tarjeta y no a una toma que pueda llevar la placa base<br>Solución 2: Eliminar polvo y suciedad que puede causar malas conexiones <br>Solución 3: Desinstalar y volver a instalar los controladores de la tarjeta<br></p>",
+          "3" : "<p><br>Solución 1: Verificar la conexión de alimentación y el interruptor de encendido<br>Solución 2: Comprobar el estado del cable de alimentación y el enchufe<br>Solución 3: Reiniciar la PC y comprobar la memoria RAM. <br>Solución 4: Reemplazar el disco duro<br></p>",
+          "4" : "<p><br>Solución 1: Inspeccione y limpie los ventiladores y las rejillas de ventilación.Es importante evitar que se acumule polvo en el equipo y proporcionar una ventilación adecuada para ayudar a reducir el calor. La acumulación de polvo y pelusas impide que el aire fluya alrededor de las aletas del ventilador y hace que el ventilador haga un trabajo más pesado<br>Solución 2: Realizar una limpieza fisica del ordenador<br>Solución 3:Mejore la eficiencia para reducir el calor. Siga estas sugerencias para mejorar la eficiencia del equipo: <ul> <li>Cambie las aplicaciones que se ejecutan cuando se inicia Windows mediante la pestaña Inicio en el Administrador de tareas.</li><li>Cierre las aplicaciones cuando no las esté utilizando.</li><li>Cierre el navegador de Internet cuando no lo esté utilizando.</li><li>Baje la resolución de la pantalla y reduzca la configuración de gráficos si el equipo se vuelve más caliente de lo normal durante la reproducción de juegos.</li></ul><br></p>",
+          "5" : "<p><br>Solución 1: Eliminar los programas o aplicaciones inecesarios que esten instalados en nuestro equipo<br>Solución 2: Tener el escritorio con pocas cosas (ojalá ninguna)<br>Solución 3: Reducir las aplicaciones que se ejecutan de inicio<br>Solución 4: Liberar espacio en el disco<br>Solución 5: Desfragmentar el disco<br>Solución 6:Cambiar ajustes de la batería<br>Solución 7: Actualiza el sistema y/o los controladores. Reiniciar el ordenador y en todo caso cambiar o reemplazar la memoria RAM<br></p>",
+          "6" : "<p><br>Solución 1: Verificar el enchufe. Este puede estar deteriorado y esa es la razón, por la cual no funciona de forma correcta. De la misma manera, en algunas ocasiones, es importante tener un transformador o extensión en casa, debido a que la batería es potente y necesita más amperios.<br>Solución 2: Limpiar cuidadosamente el puerto de carga<br>Solución 3: Checar si el cable del cargador no esta dañado, si es asi, adquirir un nuevo cargador<br></p>",
+          "7" : "<p><br>Solución 1: Comprese una:) en nuestra seccion de 'Productos y servicios' encontara este producto<br> Nota: La solucion anterirmente mencionada podria solucionar cualquiera de los otros problemas que enumeramos en la lista :D<br></p>",
         };
 
         let mensaje = document.getElementById("txt_mensaje").value;
         document.getElementById("txt_mensaje").value="";
-        document.getElementById("mensajes").innerHTML+="<br>Usuario: " + mensaje;
+        document.getElementById("mensajes").innerHTML+="<p><br>Usuario: <p>" + mensaje;
 
         let palabras = mensaje.split(" ");
         for(let i in palabras)
         {
           if(respuestas[palabras[i]] != undefined)
           {
-            document.getElementById("mensajes").innerHTML+="<br>Soporte virtual: ";
+            document.getElementById("mensajes").innerHTML+="<p><br>Soporte virtual: <p>";
             document.getElementById("mensajes").innerHTML+= "<br>" + respuestas[palabras[i]];
           }
           else
@@ -47,9 +47,10 @@
   </head>
   
   <body>
+    
     <header> 
       
-      <h1 style="background-color: #CE7DD5"> Soporte técnico virtual </h1>
+      <h1 style="background-color: #000000" id="pagin"> Soporte técnico virtual </h1>
 
       <nav>
 
@@ -67,7 +68,6 @@
 
     </header>
     <main>
-
       <div class="container">
         <div class="row">
           
@@ -116,46 +116,44 @@
              
 
               <div class="row">
-                <div class="col-md-4 d-flex justify-content-center  flex-column">
-
-                  <img src="Imagenes/compd.jpg" style="width:200; height:200;">
+                <div class="col d-flex justify-content-center  flex-column">
+                  <img src="Imagenes/compd.jpg" style="width:230px; height:225px;">
                   <p>Computadora de escritorio <br> 
                     $14,999.00 MXN</p>
+                  </div>
+                <div class="col d-flex justify-content-center flex-column">
 
-                </div>
-                <div class="col-md-4 d-flex justify-content-center flex-column">
-
-                  <img src="Imagenes/lap2.jpg" style="width:200; height:200;">
+                  <img src="Imagenes/lap2.jpg" style="width:250px; height:200px;">
                   <p> Laptopt $10,469.00 MXN</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center  flex-column">
-                   <img src="Imagenes/table.jpg" style="width:200; height:200;">
+                <div class="col-mg-6 d-flex justify-content-center  flex-column">
+                   <img src="Imagenes/table.jpg" style="width:200px; height:200px;">
                   <p>Tablets $2,689.00 MXN</p>
                 </div>
-                <div class="col-md-4 d-flex justify-content-center  flex-column">
-                  <img src="Imagenes/monitor2.jpg" style= "width:200; height:200;">
+                <div class="col d-flex justify-content-center  flex-column">
+                  <img src="Imagenes/monitor2.jpg" style= "width:200px; height:200px;">
                   <p> Monitores $1,369.00 MXN </p>
                </div>
-               <div class="col-md-4 d-flex justify-content-center  flex-column">
-                <img src="Imagenes/impre.jpg" style= "width:200; height:200;">
+               <div class="col d-flex justify-content-center  flex-column">
+                <img src="Imagenes/impre.jpg" style= "width:200px; height:200px;">
                 <p> Impresoras $15,249.00 MXN </p>
               </div>
-              <div class="col-md-4 d-flex justify-content-center  flex-column">
-                <img src="Imagenes/tinton.jpg" style="height:200;">
+              <div class="col d-flex justify-content-center  flex-column">
+                <img src="Imagenes/tinton.jpg" style="width: 200px; height:200px;">
                 <p>Tinta $981.62 MXN <br> Toner $469.00 MXN</p>
               </div>
-              <div class="col-md-4 d-flex justify-content-center  flex-column">
-                <img src="Imagenes/perifericos.jpg" style= "width:200; height:200;">
+              <div class="col d-flex justify-content-center  flex-column">
+                <img src="Imagenes/perifericos.jpg" style= "width:200px; height:200px;">
                  <p>Perifericos(Teclado, mouse,etc.) $"El precio dependera del tipo de producto"</p>
               </div>
-              <div class="col-md-4 d-flex justify-content-center  flex-column">
-                <img src="Imagenes/acc.jpg" style= "width:200; height:200;">
+              <div class="col d-flex justify-content-center  flex-column">
+                <img src="Imagenes/acc.jpg" style= "width:200px; height:200px;">
                 <p> De mas accesorios<br> 
                   $"El precio dependera del tipo de producto" </p>
               </div>
-              <div class="col-md-4 d-flex justify-content-center  flex-column">
-                <img src="Imagenes/movil.webp" style= "width:200; height:200;">
-                <p> Telefonos celulares <br>
+              <div class="col d-flex justify-content-center  flex-column">
+                <img src="Imagenes/movil.webp" style= "width:200px; height:200px;">
+                <p> Telefonos moviles<br>
                   $2,399.00 MXN </p>
               </div>
               </div>
@@ -214,16 +212,17 @@
               <li>Direccion: Comunidad San Rafael de Villaseñor s/n, San Rafael, Pénjamo, Gto. </li>
             </ul>  
           
-            <p> Tambien por medio de nuestras redes sociales: </p>
+            <h2> Tambien por medio de nuestras redes sociales: </h2>
             
             <footer>
 
               <a href="https://x.com/CECyTEG_Penjamo?s=20"><img src="Imagenes/x.png" style="width: 50px; height: 50px;"></a>
 
-              <a href="https://www.facebook.com/cecyteguanajuatoplantelpenjamo?mibextid=ZbWKwL"><img src="Imagenes/facebook.png" style="width: 50px; height: 50px;"></a>
+              <a href="https://www.facebook.com/cecyteguanajuatoplantelpenjamo?mibextid=ZbWKwL"><img src="Imagenes/faceb.jpg" style="width: 50px; height: 50px;"></a>
 
-              <a href="https://www.instagram.com/cecyteguanajuatoplantelpenjamo?igsh=MTJvemM2ajRta25ucw=="><img src="Imagenes/insta.jpg" style="width: 50px; height: 50px;"></a>
+              <a href="https://www.instagram.com/cecyteguanajuatoplantelpenjamo?igsh=MTJvemM2ajRta25ucw=="><img src="Imagenes/OIP.jpg"  style= "width: 50px; height: 50px;" ></a>
 
+              <a href="#pagin"><img src="Imagenes/logo.jpg"  style= "width: 50px; height: 50px;" ></a>
             </footer>
             
           </div>

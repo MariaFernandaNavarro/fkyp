@@ -7,13 +7,19 @@ header
   
 }
 
+#enviar
+{
+  color: #4A235A;
+  font-size: 20px;
+}
+
 /* Estilos para la barra de navegación */
 nav 
 {
   text-align: center;
   word-spacing: 30px;
   padding: 10px;
-  background-color: #ececda; /* Beige pastel */
+  background-color: #000000; /* Beige pastel */
   font-family: cursive;
 }
 
@@ -28,6 +34,7 @@ title
 {
   box-sizing: border-box;
   font-family: 'Times New Roman' ;/* Mejora la consistencia de los tamaños */ 
+  
 }
 
 /* Estilos para las filas de contenido */
@@ -107,6 +114,7 @@ li
 /* Estilos para el fondo del cuerpo */
 body 
 {
+  background-color: var(--background-color);
   background: #f0f0e6; /* Un tono suave de amarillo */
 }
 
